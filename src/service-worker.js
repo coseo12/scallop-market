@@ -1,4 +1,4 @@
-let version = 'V2';
+let version = 'V1';
 
 self.addEventListener('message', function (event) {
 	console.log('data type : ', event.data.type);
