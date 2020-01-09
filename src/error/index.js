@@ -1,3 +1,3 @@
-export default (msg) => {
-    console.log(msg);
-}
+export default msg => {
+  alert(msg);
+};
