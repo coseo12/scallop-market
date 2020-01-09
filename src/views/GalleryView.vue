@@ -1,14 +1,16 @@
 <template>
-	<div>111</div>
+	<v-container fluid grid-list-md>
+		<gallery-component></gallery-component>
+	</v-container> 
 </template>
 
 <script>
-// import GalleryComponent from '../components/GalleryComponent';
+import GalleryComponent from '../components/GalleryComponent';
 
 export default {
-	name: 'GalleryComponent',
+	name: 'GalleryView',
 	components: {
-		// GalleryComponent,
+		GalleryComponent,
 	},
 };
 </script>

@@ -2,10 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MarketView from '../views/MarketView'
 import GalleryView from '../views/GalleryView'
-// import GalleryComponent from '../components/GalleryComponent'
 import CartView from '../views/CartView'
 import HelpView from '../views/HelpView'
-import SettingsView from '../views/SettingsView'
+import ManagementView from '../views/ManagementView'
 import AboutView from '../views/AboutView'
 
 
@@ -30,7 +29,6 @@ const routes = [
     path: '/gallery',
     name: 'gallery',
     component: GalleryView
-    // component: GalleryComponent
   },
   {
     path: '/cart',
@@ -43,9 +41,9 @@ const routes = [
     component: HelpView
   },
   {
-    path: '/settings',
-    name: 'settings',
-    component: SettingsView
+    path: '/management',
+    name: 'management',
+    component: ManagementView
   },
 ]
 

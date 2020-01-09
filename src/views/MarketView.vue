@@ -1,5 +1,7 @@
 <template>
-  <market-component></market-component>
+	<v-container fluid grid-list-md>
+		<market-component></market-component>
+	</v-container>
 </template>
 
 <script>

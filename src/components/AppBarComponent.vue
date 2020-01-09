@@ -22,7 +22,14 @@
     />
     <v-spacer />
     <v-btn icon>
-      <v-icon>mdi-cart</v-icon>
+      <v-badge
+        :content="cart"
+        :value="cart"
+        color="red"
+        overlap
+      >
+        <v-icon>mdi-cart</v-icon>
+      </v-badge>
     </v-btn>
     <v-btn icon>
       <v-icon>mdi-login</v-icon>
@@ -58,7 +65,7 @@ export default {
 	name: 'AppBarComponent',
 	data() {
 		return {
-			// drawer: this.$store.drawer,
+			cart: 2,
 		};
 	},
 	computed: {
