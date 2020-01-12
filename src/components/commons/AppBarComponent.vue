@@ -72,7 +72,7 @@ export default {
 		...mapState(['navigation_drawers']),
 		drawer: {
 			set(drawer) {
-				this.$store.commit('SET_DRAWER', drawer);
+				this.$store.commit('SET_NAVIGATION_DRAWER', drawer);
 			},
 			get() {
 				return this.navigation_drawers.drawer;

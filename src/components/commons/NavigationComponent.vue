@@ -92,7 +92,7 @@ export default {
 		...mapState(['navigation_drawers']),
 		drawer: {
 			set(drawer) {
-				this.$store.commit('SET_DRAWER', drawer);
+				this.$store.commit('SET_NAVIGATION_DRAWER', drawer);
 			},
 			get() {
 				return this.navigation_drawers.drawer;
@@ -100,7 +100,7 @@ export default {
 		},
 		items: {
 			set(items) {
-				this.$store.commit('SET_ITEMS', items);
+				this.$store.commit('SET_NAVIGATION_ITEMS', items);
 			},
 			get() {
 				return this.navigation_drawers.items;

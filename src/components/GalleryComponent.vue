@@ -3,7 +3,10 @@
 			<v-flex v-for="item in items" :key="item.id" xs12 sm6 md4 lg3 xl2>
         <gallery-card>
           <template slot="avatar">
-            <v-btn icon>
+            <v-btn 
+            icon
+            dark
+            >
               <v-icon>mdi-account</v-icon>
             </v-btn>
           </template>

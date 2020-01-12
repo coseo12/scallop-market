@@ -1,19 +1,21 @@
 <template>
   <div class="d-flex flex-column mb-6">
-    <v-card
-      v-for="n in 3"
-      :key="n"
-      class="pa-2"
-      outlined
-      tile
-    >
-      Flex item {{ n }}
-    </v-card>
+    <about-carousels-component></about-carousels-component>
+    <about-timeline-component></about-timeline-component>
   </div>
 </template>
 
 <script>
-export default {};
+import AboutCarouselsComponent from '../components/AboutCarouselsComponent';
+import AboutTimelineComponent from '../components/AboutTimelineComponent';
+
+export default {
+	name: 'AboutView',
+	components: {
+		AboutCarouselsComponent,
+		AboutTimelineComponent,
+	},
+};
 </script>
 
 <style>
