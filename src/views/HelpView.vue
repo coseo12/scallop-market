@@ -1,19 +1,21 @@
 <template>
   <div class="d-flex flex-column mb-6">
-    <v-card
-      v-for="n in 3"
-      :key="n"
-      class="pa-2"
-      outlined
-      tile
-    >
-      Flex item {{ n }}
-    </v-card>
+    <google-map-component></google-map-component>
+	<contact-component></contact-component>
   </div>
 </template>
 
 <script>
-export default {};
+import GoogleMapComponent from '../components/GoogleMapComponent';
+import ContactComponent from '../components/ContactComponent';
+
+export default {
+	name: 'HelpView',
+	components: {
+		GoogleMapComponent,
+		ContactComponent,
+	},
+};
 </script>
 
 <style>
