@@ -5,13 +5,22 @@
       outlined
       tile
     >
-      장바구니 리스트
+      주문/배송조회
+    </v-card>
+    <v-card
+      class="pa-2"
+      outlined
+      tile
+    >
+      정보관리
     </v-card>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+	name: 'SignInView',
+};
 </script>
 
 <style>

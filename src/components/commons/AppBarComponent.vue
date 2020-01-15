@@ -21,7 +21,7 @@
       class="d-none hidden-sm-and-down"
     />
     <v-spacer />
-    <v-btn icon>
+    <v-btn icon @click="ToPage('cart')">
       <v-badge
         :content="cart"
         :value="cart"
@@ -48,22 +48,22 @@
         </v-btn>
       </template>
       <v-list :min-width="100">
-        <v-list-item link>
+        <v-list-item link @click="ToPage('signIn')">
           <v-list-item-title>
-            <v-icon>mdi-login</v-icon> Log In
+            <v-icon>mdi-login</v-icon> Sign In
           </v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link @click="ToPage('myPage')">
           <v-list-item-title>
             <v-icon>mdi-account-circle-outline</v-icon> My Page
           </v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link @click="ToSignOut()">
           <v-list-item-title>
-            <v-icon>mdi-logout</v-icon> Log Out
+            <v-icon>mdi-logout</v-icon> Sign Out
           </v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link @click="ToPage('signUp')">
           <v-list-item-title>
             <v-icon>mdi-clipboard-account-outline</v-icon> Sign Up
           </v-list-item-title>
@@ -92,6 +92,14 @@ export default {
 			get() {
 				return this.navigation_drawers.drawer;
 			},
+		},
+	},
+	methods: {
+		ToPage(name) {
+			this.$router.push(name);
+		},
+		ToSignOut() {
+			alert('Sign Out!');
 		},
 	},
 };

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import GalleryComponent from '../components/GalleryComponent';
+import GalleryComponent from '@/components/GalleryComponent';
 
 export default {
 	name: 'GalleryView',

@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import AboutCarouselsComponent from '../components/AboutCarouselsComponent';
-import AboutTimelineComponent from '../components/AboutTimelineComponent';
+import AboutCarouselsComponent from '@/components/AboutCarouselsComponent';
+import AboutTimelineComponent from '@/components/AboutTimelineComponent';
 
 export default {
 	name: 'AboutView',

@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import GoogleMapComponent from '../components/GoogleMapComponent';
-import ContactComponent from '../components/ContactComponent';
+import GoogleMapComponent from '@/components/GoogleMapComponent';
+import ContactComponent from '@/components/ContactComponent';
 
 export default {
 	name: 'HelpView',

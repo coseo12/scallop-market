@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MarketView from '../views/MarketView'
-import GalleryView from '../views/GalleryView'
-import CartView from '../views/CartView'
-import HelpView from '../views/HelpView'
-import ManagementView from '../views/ManagementView'
-import AboutView from '../views/AboutView'
-
+import MarketView from '@/views/MarketView'
+import GalleryView from '@/views/GalleryView'
+import CartView from '@/views/CartView'
+import HelpView from '@/views/HelpView'
+import ManagementView from '@/views/ManagementView'
+import AboutView from '@/views/AboutView'
+import MyPageView from '@/views/MyPageView'
+import SignUp from '@/views/SignUpView'
+import SignIn from '@/views/SignInView'
 
 Vue.use(VueRouter)
 
@@ -44,6 +46,21 @@ const routes = [
     path: '/management',
     name: 'management',
     component: ManagementView
+  },
+  {
+    path: '/signUp',
+    name: 'signUp',
+    component: SignUp
+  },
+  {
+    path: '/signIn',
+    name: 'signIn',
+    component: SignIn
+  },
+  {
+    path: '/myPage',
+    name: 'myPage',
+    component: MyPageView
   },
 ]
 

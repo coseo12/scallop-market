@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MarketComponent from '../components/MarketComponent';
+import MarketComponent from '@/components/MarketComponent';
 
 export default {
 	name: 'MarketView',
