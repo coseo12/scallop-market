@@ -98,10 +98,10 @@ export default {
 			});
 		},
 		async submit() {
-			console.log('name : ', this.name);
-			console.log('email : ', this.email);
-			console.log('checkbox : ', this.checkbox);
-			console.log('submitting!');
+			// console.log('name : ', this.name);
+			// console.log('email : ', this.email);
+			// console.log('checkbox : ', this.checkbox);
+			// console.log('submitting!');
 			this.$router.push('/signConfirm');
 		},
 		openPolicy() {
