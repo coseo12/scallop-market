@@ -3,18 +3,18 @@ export default {
   alerts: {
     // type : success, info, warningm error
     items: [
-      {
-        id: '1',
-        type: 'error',
-        msg: "I'm an error alert.",
-        error: '',
-      },
-      {
-        id: '2',
-        type: 'info',
-        msg: "I'm an info alert.",
-        error: '',
-      },
+      // {
+      //   id: '1',
+      //   type: 'error',
+      //   msg: "I'm an error alert.",
+      //   error: '',
+      // },
+      // {
+      //   id: '2',
+      //   type: 'info',
+      //   msg: "I'm an info alert.",
+      //   error: '',
+      // },
     ],
   },
   // Navigation drawers
@@ -155,4 +155,5 @@ export default {
       },
     ],
   },
+  policy: false,
 };

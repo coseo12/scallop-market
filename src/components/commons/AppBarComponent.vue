@@ -96,7 +96,9 @@ export default {
 	},
 	methods: {
 		ToPage(name) {
-			this.$router.push(name);
+			if (this.$route.name !== name) {
+				this.$router.push(name);
+			}
 		},
 		ToSignOut() {
 			alert('Sign Out!');

@@ -7,5 +7,15 @@ module.exports = {
       swSrc: 'src/service-worker.js',
     },
   },
+
   transpileDependencies: ['vuetify'],
+
+  pluginOptions: {
+    i18n: {
+      locale: 'ko',
+      fallbackLocale: 'ko',
+      localeDir: 'locales',
+      enableInSFC: false
+    }
+  }
 };

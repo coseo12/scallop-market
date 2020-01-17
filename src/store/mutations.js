@@ -8,4 +8,10 @@ export default {
   SET_ALERTS_ITEMS(state, payload) {
     state.alerts.items = payload;
   },
+  SET_ALERTS_ITEM(state, payload) {
+    state.alerts.items.push(payload);
+  },
+  SET_POLICY(state, payload) {
+    state.policy = payload;
+  },
 };

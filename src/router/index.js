@@ -7,8 +7,9 @@ import HelpView from '@/views/HelpView'
 import ManagementView from '@/views/ManagementView'
 import AboutView from '@/views/AboutView'
 import MyPageView from '@/views/MyPageView'
-import SignUp from '@/views/SignUpView'
-import SignIn from '@/views/SignInView'
+import SignUpView from '@/views/SignUpView'
+import SignInView from '@/views/SignInView'
+import SignConfirmView from '@/views/SignConfirmView'
 
 Vue.use(VueRouter)
 
@@ -50,12 +51,17 @@ const routes = [
   {
     path: '/signUp',
     name: 'signUp',
-    component: SignUp
+    component: SignUpView
   },
   {
     path: '/signIn',
     name: 'signIn',
-    component: SignIn
+    component: SignInView
+  },
+  {
+    path: '/signConfirm',
+    name: 'signConfirm',
+    component: SignConfirmView
   },
   {
     path: '/myPage',
