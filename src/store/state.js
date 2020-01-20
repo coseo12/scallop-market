@@ -88,14 +88,14 @@ export default {
     items: [
       {
         id: 1,
-        headline: 'headline1',
+        title: 'title1',
         subtitle: 'subtitle1',
         text: 'text1',
         src: 'https://picsum.photos/500/300?image=15',
       },
       {
         id: 2,
-        headline: 'headline2',
+        title: 'title2',
         subtitle: 'subtitle2',
         text: 'text2',
         src: 'https://picsum.photos/500/300?image=16',

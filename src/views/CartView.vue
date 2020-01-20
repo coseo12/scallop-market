@@ -1,17 +1,18 @@
 <template>
   <div class="d-flex flex-column mb-6">
-    <v-card
-      class="pa-2"
-      outlined
-      tile
-    >
-      장바구니 리스트
-    </v-card>
+    <cart-component></cart-component>
   </div>
 </template>
 
 <script>
-export default {};
+import CartComponent from '@/components/CartComponent';
+
+export default {
+	name: 'CartView',
+	components: {
+		CartComponent,
+	},
+};
 </script>
 
 <style>

@@ -1,8 +1,8 @@
 import typeAlerts from '../utils/typeAlerts'
 
-export default (store, msg, error) => {
+export default (msg, error) => {
   // type : success, info, warningm error
-  typeAlerts(store, msg, 'error');
+  typeAlerts(msg, 'error');
   error
   // console.log(error);
 };

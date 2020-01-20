@@ -1,5 +1,5 @@
 <template>
-  <div id="fab">
+  <div id="fab" v-show="hide">
     <v-card id="create" v-if="!auth">
       <v-speed-dial
         :top="top"
@@ -39,7 +39,7 @@
         <template v-slot:activator>
           <v-btn
             v-model="fab"
-            color="red darken-4"
+            color="blue darken-2"
             dark
             fab
           >
@@ -47,16 +47,22 @@
             <v-icon v-else>mdi-plus</v-icon>
           </v-btn>
         </template>
-        <v-btn
-          v-scroll="onScroll"
-          @click="onTop"
-          fab
-          dark
-          small
-          color="blue darken-2"
-        >
-          <v-icon>mdi-chevron-up</v-icon>
-        </v-btn>
+        <v-tooltip left>
+          <template v-slot:activator="{ on }">
+          <v-btn
+            v-scroll="onScroll"
+            @click="onTop"
+            v-on="on"
+            fab
+            dark
+            small
+            color="blue darken-2"
+          >
+            <v-icon>mdi-chevron-up</v-icon>
+          </v-btn>
+        </template>
+          <span>To top</span>
+        </v-tooltip>
         <v-btn
           fab
           dark
@@ -99,24 +105,11 @@ export default {
 		bottom: true,
 		left: false,
 		transition: 'slide-y-reverse-transition',
-		auth: false,
+		auth: true,
 		topBtn: false,
+		hide: true,
 	}),
-
-	computed: {
-		activeFab() {
-			switch (this.tabs) {
-				case 'one':
-					return { class: 'purple', icon: 'account_circle' };
-				case 'two':
-					return { class: 'red', icon: 'edit' };
-				case 'three':
-					return { class: 'green', icon: 'keyboard_arrow_up' };
-				default:
-					return {};
-			}
-		},
-	},
+	computed: {},
 
 	watch: {
 		top(val) {

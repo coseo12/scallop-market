@@ -1,11 +1,11 @@
 <template>
   <ValidationObserver ref="obs" v-slot="{ invalid, validated, passes }">
     <v-card class="elevation-4">
-		<v-toolbar 
-		dark
-		prominent
-		src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-		>
+      <v-toolbar 
+      dark
+      prominent
+      src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+      >
 			<v-toolbar-title>Sign Up</v-toolbar-title>
       </v-toolbar>
       <v-card-text>
@@ -65,11 +65,11 @@
         </v-form>
       </v-card-text>
       <v-card-actions>
-        <v-btn large color="primary" @click="passes(submit)" :disabled="invalid || !validated">Sign Up</v-btn>
-        <v-btn text large color="primary" @click="clear">Clear</v-btn>
+        <v-btn text small color="primary" @click="openPolicy">Privacy Policy</v-btn>
         <v-spacer></v-spacer>
         <!-- <v-btn @click="validate">Validate</v-btn> -->
-        <v-btn text small color="primary" @click="openPolicy">Privacy Policy</v-btn>
+        <v-btn large color="primary" @click="passes(submit)" :disabled="invalid || !validated">Sign Up</v-btn>
+        <v-btn text large color="primary" @click="clear">Clear</v-btn>
       </v-card-actions>
     </v-card>
   </ValidationObserver>
@@ -98,10 +98,6 @@ export default {
 			});
 		},
 		async submit() {
-			// console.log('name : ', this.name);
-			// console.log('email : ', this.email);
-			// console.log('checkbox : ', this.checkbox);
-			// console.log('submitting!');
 			this.$router.push('/signConfirm');
 		},
 		openPolicy() {

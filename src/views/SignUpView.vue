@@ -1,11 +1,6 @@
 <template>
   <div class="d-flex flex-column mb-6">
-	<v-overlay
-		:absolute="absolute"
-		:value="setOverlay"
-	>
 	<privacy-policy></privacy-policy>
-	</v-overlay>
     <sign-up-component></sign-up-component>
   </div>
 </template>
@@ -19,16 +14,6 @@ export default {
 	components: {
 		SignUpComponent,
 		PrivacyPolicy,
-	},
-	data() {
-		return {
-			absolute: true,
-		};
-	},
-	computed: {
-		setOverlay() {
-			return this.$store.state.policy;
-		},
 	},
 };
 </script>
