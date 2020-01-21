@@ -18,7 +18,7 @@
 <script>
 import NavigationComponent from './components/commons/NavigationComponent';
 import AppBarComponent from './components/commons/AppBarComponent';
-import AlertsModal from './components/commons/AlertsModal';
+import AlertsModal from './components/modals/AlertsModal';
 import FloatingActionsAdminButtons from './components/commons/FloatingActionsAdminButtons';
 import FloatingActionsScrollButtons from './components/commons/FloatingActionsScrollButtons';
 

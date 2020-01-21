@@ -1,19 +1,19 @@
 <template>
   <div class="d-flex flex-column mb-6">
-	<privacy-policy></privacy-policy>
+	<privacy-policy-modal></privacy-policy-modal>
     <sign-up-component></sign-up-component>
   </div>
 </template>
 
 <script>
 import SignUpComponent from '@/components/SignUpComponent';
-import PrivacyPolicy from '@/components/commons/PrivacyPolicy';
+import PrivacyPolicyModal from '@/components/modals/PrivacyPolicyModal';
 
 export default {
 	name: 'SignUpView',
 	components: {
 		SignUpComponent,
-		PrivacyPolicy,
+		PrivacyPolicyModal,
 	},
 };
 </script>

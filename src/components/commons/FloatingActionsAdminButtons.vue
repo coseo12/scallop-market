@@ -87,7 +87,15 @@ export default {
 	computed: {
 		auth() {
 			let flag = true;
-			const keys = ['signUp', 'signIn', 'about', 'management', 'help', 'cart'];
+			const keys = [
+				'signUp',
+				'signIn',
+				'about',
+				'management',
+				'help',
+				'cart',
+				'myPage',
+			];
 			for (let key of keys) {
 				if (this.$route.name === key) {
 					flag = false;
