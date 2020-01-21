@@ -4,8 +4,8 @@
       background-color="white"
       color="indigo accent-4"
     >
-      <v-tab>Order</v-tab>
-      <v-tab>Confirm</v-tab>
+      <v-tab>Order List</v-tab>
+      <v-tab>Market Info</v-tab>
 
       <v-tab-item
         v-for="n in 2"
@@ -13,12 +13,12 @@
       >
         <v-container fluid v-if="n === 1">
           <div class="d-flex flex-column mb-6">
-            Order
+            <order-list-component></order-list-component>
           </div>
         </v-container>
         <v-container fluid v-else>
           <div class="d-flex flex-column mb-6">
-            Confirm 
+            <market-info-component></market-info-component>
           </div>
         </v-container>
       </v-tab-item>
@@ -27,7 +27,16 @@
 </template>
 
 <script>
-export default {};
+import OrderListComponent from '../components/OrderListComponent';
+import MarketInfoComponent from '../components/MarketInfoComponent';
+
+export default {
+	name: 'ManagementView',
+	components: {
+		OrderListComponent,
+		MarketInfoComponent,
+	},
+};
 </script>
 
 <style>
