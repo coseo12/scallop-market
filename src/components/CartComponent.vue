@@ -1,8 +1,29 @@
 <template>
-    <v-layout row wrap>
-        <v-flex v-for="item in items" :key="item.id" xs12 sm6 md4 lg3 xl2>
-             <v-card
-            :color="color"
+  <v-layout row wrap>
+    <div>
+      <v-row dense>
+        <v-col cols="12">
+          <v-card
+            color="#385F73"
+            dark
+          >
+            <v-card-title class="headline">Unlimited music now</v-card-title>
+
+            <v-card-subtitle>Listen to your favorite artists and albums whenever and wherever, online and offline.</v-card-subtitle>
+
+            <v-card-actions>
+              <v-btn text>Listen Now</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+
+        <v-col
+          v-for="(item, i) in items"
+          :key="i"
+          cols="12"
+        >
+          <v-card
+            :color="item.color"
             dark
           >
             <div class="d-flex flex-no-wrap justify-space-between">
@@ -12,10 +33,7 @@
                   v-text="item.title"
                 ></v-card-title>
 
-                <v-card-subtitle v-text="item.subtitle"></v-card-subtitle>
-                <v-card-actions>
-                    <v-btn text>Listen Now</v-btn>
-                </v-card-actions>
+                <v-card-subtitle v-text="item.artist"></v-card-subtitle>
               </div>
 
               <v-avatar
@@ -27,21 +45,36 @@
               </v-avatar>
             </div>
           </v-card>
-        </v-flex>
-    </v-layout>
+        </v-col>
+      </v-row>
+    </div>
+    <div>
+      layout 2
+    </div>
+  </v-layout>
 </template>
 
 <script>
 export default {
 	name: 'CartComponent',
-	data() {
-		return {
-			items: this.$store.state.cart.items,
-			color: '#AAAAAA',
-		};
-	},
+	data: () => ({
+		items: [
+			{
+				color: '#1F7087',
+				src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+				title: 'Supermodel',
+				artist: 'Foster the People',
+			},
+			{
+				color: '#952175',
+				src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
+				title: 'Halcyon Days',
+				artist: 'Ellie Goulding',
+			},
+		],
+	}),
 };
 </script>
 
-<style>
+<style scoped>
 </style>

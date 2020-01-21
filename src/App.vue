@@ -7,7 +7,8 @@
       <v-container fluid>
         <!-- If using vue-router -->
         <router-view></router-view>
-        <floating-actions-buttons></floating-actions-buttons>
+        <floating-actions-admin-buttons></floating-actions-admin-buttons>
+        <floating-actions-scroll-buttons></floating-actions-scroll-buttons>
         <alerts-modal></alerts-modal>
       </v-container>
     </v-content>
@@ -18,7 +19,8 @@
 import NavigationComponent from './components/commons/NavigationComponent';
 import AppBarComponent from './components/commons/AppBarComponent';
 import AlertsModal from './components/commons/AlertsModal';
-import FloatingActionsButtons from './components/commons/FloatingActionsButtons';
+import FloatingActionsAdminButtons from './components/commons/FloatingActionsAdminButtons';
+import FloatingActionsScrollButtons from './components/commons/FloatingActionsScrollButtons';
 
 export default {
 	name: 'App',
@@ -26,10 +28,14 @@ export default {
 		NavigationComponent,
 		AppBarComponent,
 		AlertsModal,
-		FloatingActionsButtons,
+		FloatingActionsAdminButtons,
+		FloatingActionsScrollButtons,
 	},
 	data() {
 		return {};
 	},
 };
 </script>
+
+<style scoped>
+</style>

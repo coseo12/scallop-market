@@ -1,6 +1,6 @@
 <template>
   <div id="fab" v-show="hide">
-    <v-card id="create" v-if="!auth">
+    <v-card id="create">
       <v-speed-dial
         :top="top"
         :bottom="bottom"
@@ -17,76 +17,13 @@
             @click="onTop"
             class="topBtn"
             color="blue darken-2"
-            dark
-            fab
-          >
-            <v-icon>mdi-chevron-up</v-icon>
-          </v-btn>
-        </template>
-      </v-speed-dial>
-    </v-card>
-    <v-card id="create" v-else>
-      <v-speed-dial
-        v-model="fab"
-        :top="top"
-        :bottom="bottom"
-        :right="right"
-        :left="left"
-        :direction="direction"
-        :open-on-hover="hover"
-        :transition="transition"
-      > 
-        <template v-slot:activator>
-          <v-btn
-            v-model="fab"
-            color="blue darken-2"
-            dark
-            fab
-          >
-            <v-icon v-if="fab">mdi-close</v-icon>
-            <v-icon v-else>mdi-plus</v-icon>
-          </v-btn>
-        </template>
-        <v-tooltip left>
-          <template v-slot:activator="{ on }">
-          <v-btn
-            v-scroll="onScroll"
-            @click="onTop"
-            v-on="on"
-            fab
-            dark
             small
-            color="blue darken-2"
+            dark
+            fab
           >
             <v-icon>mdi-chevron-up</v-icon>
           </v-btn>
         </template>
-          <span>To top</span>
-        </v-tooltip>
-        <v-btn
-          fab
-          dark
-          small
-          color="green"
-        >
-          <v-icon>mdi-pencil</v-icon>
-        </v-btn>
-        <v-btn
-          fab
-          dark
-          small
-          color="indigo"
-        >
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
-        <v-btn
-          fab
-          dark
-          small
-          color="red"
-        >
-          <v-icon>mdi-delete</v-icon>
-        </v-btn>
       </v-speed-dial>
     </v-card>
   </div>
@@ -105,7 +42,6 @@ export default {
 		bottom: true,
 		left: false,
 		transition: 'slide-y-reverse-transition',
-		auth: true,
 		topBtn: false,
 		hide: true,
 	}),
@@ -142,7 +78,7 @@ export default {
 /* This is for documentation purposes and will not be needed in your application */
 #fab {
 	position: sticky;
-	bottom: 0;
+	bottom: 85px;
 }
 
 #create .v-speed-dial {
