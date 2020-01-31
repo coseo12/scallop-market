@@ -11,18 +11,20 @@
         :transition="transition"
       > 
         <template v-slot:activator>
-          <v-btn
-            v-scroll="onScroll"
-            v-show="topBtn"
-            @click="onTop"
-            class="topBtn"
-            color="blue darken-2"
-            small
-            dark
-            fab
-          >
-            <v-icon>mdi-chevron-up</v-icon>
-          </v-btn>
+			<v-fab-transition>
+				<v-btn
+				v-scroll="onScroll"
+				v-show="topBtn"
+				@click="onTop"
+				class="topBtn"
+				color="blue darken-2"
+				small
+				dark
+				fab
+				>
+				<v-icon>mdi-chevron-up</v-icon>
+				</v-btn>
+			</v-fab-transition>
         </template>
       </v-speed-dial>
     </v-card>
@@ -45,8 +47,6 @@ export default {
 		topBtn: false,
 		hide: true,
 	}),
-	computed: {},
-
 	watch: {
 		top(val) {
 			this.bottom = !val;

@@ -1,4 +1,5 @@
 import { store } from '../store'
+
 export default (msg, type) => {
     // type : success, info, warningm error
     let item = {

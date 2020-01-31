@@ -1,21 +1,27 @@
 export default {
   // App Component
+
   alerts: {
-    // type : success, info, warningm error
+    // type : success, info, warning, error
     items: [
-      // {
-      //   id: '1',
-      //   type: 'error',
-      //   msg: "I'm an error alert.",
-      //   error: '',
-      // },
-      // {
-      //   id: '2',
-      //   type: 'info',
-      //   msg: "I'm an info alert.",
-      //   error: '',
-      // },
+      {
+        id: '1',
+        type: 'error',
+        msg: "I'm an error alert.",
+        error: '',
+      },
+      {
+        id: '2',
+        type: 'info',
+        msg: "I'm an info alert.",
+        error: '',
+      },
     ],
+    // color : success, info, error, cyan darken-2
+    snack: {
+      color: 'success',
+      msg: "I'm an success snackbar"
+    }
   },
   // Navigation drawers
   navigation_drawers: {

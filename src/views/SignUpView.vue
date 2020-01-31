@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex flex-column mb-6">
-	<privacy-policy-modal></privacy-policy-modal>
     <sign-up-component></sign-up-component>
+	<privacy-policy-modal></privacy-policy-modal>
   </div>
 </template>
 

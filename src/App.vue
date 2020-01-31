@@ -9,7 +9,8 @@
         <router-view></router-view>
         <floating-actions-admin-buttons></floating-actions-admin-buttons>
         <floating-actions-scroll-buttons></floating-actions-scroll-buttons>
-        <alerts-modal></alerts-modal>
+        <type-alerts-modal></type-alerts-modal>
+        <snack-bar></snack-bar>
       </v-container>
     </v-content>
   </v-app>
@@ -18,21 +19,20 @@
 <script>
 import NavigationComponent from './components/commons/NavigationComponent';
 import AppBarComponent from './components/commons/AppBarComponent';
-import AlertsModal from './components/modals/AlertsModal';
 import FloatingActionsAdminButtons from './components/commons/FloatingActionsAdminButtons';
 import FloatingActionsScrollButtons from './components/commons/FloatingActionsScrollButtons';
+import TypeAlertsModal from './components/modals/TypeAlertsModal';
+import SnackBar from './components/modals/SnackBar';
 
 export default {
 	name: 'App',
 	components: {
 		NavigationComponent,
 		AppBarComponent,
-		AlertsModal,
 		FloatingActionsAdminButtons,
 		FloatingActionsScrollButtons,
-	},
-	data() {
-		return {};
+		TypeAlertsModal,
+		SnackBar,
 	},
 };
 </script>

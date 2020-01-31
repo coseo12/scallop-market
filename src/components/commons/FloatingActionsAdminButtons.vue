@@ -26,43 +26,17 @@
         <v-tooltip left>
           <template v-slot:activator="{ on }">
           <v-btn
-            v-scroll="onScroll"
-            @click="onTop"
             v-on="on"
             fab
             dark
             small
-            color="blue darken-2"
+            color="teal accent-4"
           >
-            <v-icon>mdi-chevron-up</v-icon>
+            <v-icon>mdi-note-plus</v-icon>
           </v-btn>
         </template>
-          <span>To top</span>
+          <span>New Product</span>
         </v-tooltip>
-        <v-btn
-          fab
-          dark
-          small
-          color="green"
-        >
-          <v-icon>mdi-pencil</v-icon>
-        </v-btn>
-        <v-btn
-          fab
-          dark
-          small
-          color="indigo"
-        >
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
-        <v-btn
-          fab
-          dark
-          small
-          color="red"
-        >
-          <v-icon>mdi-delete</v-icon>
-        </v-btn>
       </v-speed-dial>
     </v-card>
   </div>
@@ -117,16 +91,6 @@ export default {
 		},
 		left(val) {
 			this.right = !val;
-		},
-	},
-	methods: {
-		onScroll(e) {
-			if (typeof window === 'undefined') return;
-			const top = window.pageYOffset || e.target.scrollTop || 0;
-			this.topBtn = top > 20;
-		},
-		onTop() {
-			this.$vuetify.goTo(0);
 		},
 	},
 };

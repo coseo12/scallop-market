@@ -26,8 +26,16 @@
         </template>
         <template slot="button">
           <v-btn text icon color="blue lighten-1">
-              <v-icon>mdi-cart</v-icon>
+            <v-icon>mdi-cart</v-icon>
+          </v-btn>
+          <template v-if="auth">
+            <v-btn text icon color="teal accent-4">
+              <v-icon>mdi-pencil</v-icon>
             </v-btn>
+            <v-btn text icon color="red">
+              <v-icon>mdi-delete</v-icon>
+            </v-btn>
+          </template>
         </template>
         <template slot="text">
           {{ item.text }}
@@ -48,6 +56,7 @@ export default {
 	data() {
 		return {
 			items: this.$store.state.market.items,
+			auth: true,
 		};
 	},
 };

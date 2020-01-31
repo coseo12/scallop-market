@@ -8,7 +8,7 @@
             >
 
                 <slot name="image"></slot>
-
+                
                 <v-card-title>
                     <slot name="title"></slot>
                 </v-card-title>

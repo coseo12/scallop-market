@@ -11,6 +11,9 @@ export default {
   SET_ALERTS_ITEM(state, payload) {
     state.alerts.items.push(payload);
   },
+  SET_ALERTS_SNACK(state, payload) {
+    state.alerts.snack = payload;
+  },
   SET_POLICY(state, payload) {
     state.policy = payload;
   },

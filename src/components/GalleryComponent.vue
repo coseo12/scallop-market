@@ -36,7 +36,16 @@
           <template slot="text">
               {{ item.text }}
           </template>
-          <template slot="left_btn"></template>
+          <template slot="left_btn">
+            <template v-if="auth">
+              <v-btn text icon color="teal accent-4">
+                <v-icon>mdi-pencil</v-icon>
+              </v-btn>
+              <v-btn text icon color="red">
+                <v-icon>mdi-delete</v-icon>
+              </v-btn>
+            </template>
+          </template>
           <template slot="right_btn"></template>
         </gallery-card>
 			</v-flex>
@@ -54,6 +63,7 @@ export default {
 	data() {
 		return {
 			items: this.$store.state.work_gallery.items,
+			auth: true,
 		};
 	},
 };
